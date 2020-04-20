@@ -1,0 +1,86 @@
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+article {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article h1 {
+  background-color: #564592;
+  text-align: center;
+  color: #FFF;
+  padding: 8px;
+  font-weight: 700;
+}
+
+article figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+article figure img {
+  height: 125px;
+}
+
+article p {
+  background-color: #564592;
+  font-weight: 500;
+  color: #FFF;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 8px;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+p span.cost {
+  justify-self: flex-start;
+}
+
+p span.quantity {
+  justify-self: flex-end;
+}
+
+p span.created-at {
+  justify-self: flex-start;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+p span.group {
+  justify-self: flex-end;
+}
+
+p span.group span.edit,
+p span.group span.delete {
+  font-size: 18px;
+}
+
+p span.group span.edit {
+  color: #EDF67D;
+}
+
+p span.group span.delete {
+  color: #F896D8;
+}
+
+section article#add {
+  background-color: #564592;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+article#add span {
+  color: #FFF;
+  font-size: 128px;
+}

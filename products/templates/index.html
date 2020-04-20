@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Gestão de produtos
+{% endblock title %}
+
+
+{% block styles %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/index.css' %}">
+{% endblock styles %}
+
+
+{% block content %}
+<section>
+
+  <article id="add">
+    <span class="material-icons">
+      add_circle
+    </span>
+  </article>
+
+  {% for product in products %}
+  <article>
+    <h1>{{ product.name }}</h1>
+
+    <figure>
+      <img src="{{ product.image_url }}" alt="{{ product.name }}" />
+    </figure>
+
+    <p>
+      <span class="cost">R$ {{ product.cost }}</span>
+
+      <span class="quantity">{{ product.quantity }} unidade(s)</span>
+
+      <span class="created-at">{{ product.created_at }}</span>
+
+      <span class="group">
+        <span class="material-icons edit">
+          edit
+        </span>
+
+        <span class="material-icons delete">
+          delete
+        </span>
+      </span>
+    </p>
+  </article>
+  {% endfor %}
+
+</section>
+{% endblock content %}

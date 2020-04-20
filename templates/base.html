@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {% block title %}
+
+    {% endblock title %}
+  </title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+
+  {% block styles %}
+
+  {% endblock styles %}
+
+</head>
+
+<body>
+
+  <header>
+    <span class="material-icons" id="logo">
+      shopping_cart
+    </span>
+  </header>
+
+  <main>
+
+    {% block content %}
+
+    {% endblock content %}
+
+  </main>
+
+</body>
+
+</html>
