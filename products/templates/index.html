@@ -15,11 +15,13 @@ Gestão de produtos
 {% block content %}
 <section>
 
-  <article id="add">
-    <span class="material-icons">
-      add_circle
-    </span>
-  </article>
+  <a href="{% url 'products:new' %}">
+    <article id="add">
+      <span class="material-icons">
+        add_circle
+      </span>
+    </article>
+  </a>
 
   {% for product in products %}
   <article>
@@ -37,13 +39,17 @@ Gestão de produtos
       <span class="created-at">{{ product.created_at }}</span>
 
       <span class="group">
-        <span class="material-icons edit">
-          edit
-        </span>
+        <a href="{% url 'products:update' product.slug %}">
+          <span class="material-icons edit">
+            edit
+          </span>
+        </a>
 
-        <span class="material-icons delete">
-          delete
-        </span>
+        <a href="{% url 'products:delete' product.slug %}">
+          <span class="material-icons delete">
+            delete
+          </span>
+        </a>
       </span>
     </p>
   </article>

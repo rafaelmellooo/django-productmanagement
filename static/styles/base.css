@@ -19,7 +19,14 @@ header {
   height: 100px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 50px;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 img {
@@ -31,12 +38,20 @@ img {
   object-position: center;
 }
 
+a {
+  text-decoration: inherit;
+  cursor: pointer;
+  color: inherit;
+  height: 100%;
+}
+
 main {
   width: 960px;
   margin: auto;
   padding: 20px;
 }
 
-span#logo {
+header span#home,
+header span#logout {
   font-size: 64px;
 }

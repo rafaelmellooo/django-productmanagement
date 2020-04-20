@@ -1,0 +1,90 @@
+form {
+  padding: 20px 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea#bio {
+  resize: vertical;
+}
+
+form label {
+  font-size: 12px;
+  padding: 8px 0;
+  font-weight: 500;
+}
+
+form ul {
+  list-style: none;
+}
+
+form ul li {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: #ffc107;
+  font-weight: 500;
+}
+
+form ul li::before {
+  margin-right: 4px;
+  content: "⚠️";
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 24px;
+  border: none;
+}
+
+form input:not([type='file']) {
+  font-size: 18px;
+}
+
+form input:not([type='file']):invalid {
+  box-shadow: none;
+  border-bottom: thin solid #dc3545;
+}
+
+form input:not([type='file']):valid {
+  box-shadow: none;
+  border-bottom: thin solid #28a745;
+}
+
+form textarea {
+  padding: 8px;
+  line-height: 24px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+form textarea:invalid {
+  box-shadow: none !important;
+  border: thin solid #dc3545;
+}
+
+form textarea:valid {
+  box-shadow: none !important;
+  border: thin solid #28a745;
+}
+
+form button {
+  align-self: flex-end;
+  display: block;
+  padding: 10px 40px;
+  background-color: #564592;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+
+form button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}

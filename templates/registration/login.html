@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Autenticação
+{% endblock title %}
+
+{% block styles %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/login.css' %}">
+{% endblock styles %}
+
+{% block content %}
+<section>
+  <h1>Autenticação</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form }}
+
+    <button>Acessar</button>
+  </form>
+</section>
+{% endblock content %}

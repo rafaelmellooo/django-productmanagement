@@ -24,9 +24,20 @@
 <body>
 
   <header>
-    <span class="material-icons" id="logo">
-      shopping_cart
-    </span>
+    <a href="{% url 'products:index' %}">
+      <span class="material-icons" id="home">
+        home
+      </span>
+    </a>
+
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">
+      <span class="material-icons" id="logout">
+        exit_to_app
+      </span>
+    </a>
+    {% endif %}
+
   </header>
 
   <main>

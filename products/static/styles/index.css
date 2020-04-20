@@ -63,6 +63,7 @@ p span.group {
 p span.group span.edit,
 p span.group span.delete {
   font-size: 18px;
+  transition: font-size 0.3s;
 }
 
 p span.group span.edit {
@@ -73,11 +74,21 @@ p span.group span.delete {
   color: #F896D8;
 }
 
+p span.group span.delete:hover,
+p span.group span.edit:hover {
+  font-size: 24px;
+}
+
 section article#add {
   background-color: #564592;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.3s;
+}
+
+section article#add:hover {
+  opacity: 0.9;
 }
 
 article#add span {

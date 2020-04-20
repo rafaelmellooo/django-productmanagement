@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% if product %}
+{{ product }}
+{% else %}
+Novo produto
+{% endif %}
+
+{% endblock title %}
+
+{% block styles %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/form.css' %}">
+{% endblock styles %}
+
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form }}
+
+  <button>Salvar</button>
+</form>
+{% endblock content %}
