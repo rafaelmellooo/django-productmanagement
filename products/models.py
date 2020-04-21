@@ -5,6 +5,16 @@ from django.dispatch import receiver
 from django.template.defaultfilters import slugify
 
 
+class Type(models.Model):
+    name = models.CharField(max_length=20, unique=True)
+
+    class Meta:
+        db_table = 'product_types'
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
     name = models.CharField(max_length=20, unique=True)
     slug = models.SlugField(max_length=20, blank=True, unique=True)
@@ -12,6 +22,7 @@ class Product(models.Model):
     cost = models.DecimalField(max_digits=6, decimal_places=2)
     created_at = models.DateTimeField(auto_now_add=True)
     quantity = models.IntegerField(null=True)
+    type = models.ForeignKey(Type, blank=True, null=True, on_delete=models.SET_NULL)
 
     class Meta:
         db_table = 'products'
